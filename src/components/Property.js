@@ -39,7 +39,7 @@ export class Property extends Component {
             <div style={this.getStyle()}>
                 <this.ControlIcon name={'delete'} action={this.props.deleteProperty} index={this.props.index}/>
                 <span style={{fontSize: 'large',fontWeight: 'bold', margin: '3px'}}>{this.props.property.name}</span>
-                <span style={this.getKeyValueStyle()}>type: {this.props.property.isArray ? `[${this.props.property.type}]`: `${this.props.property.type}`},</span>
+                <span style={this.getKeyValueStyle()}>type: {this.props.property.type},</span>
                 {this.props.property.defaultValue ? <span style={this.getKeyValueStyle()}>defalut: {this.props.property.defaultValue},</span> : ''}
                 <span style={this.getKeyValueStyle()}>required: {this.props.property.isRequired.toString()},</span>
                 <span style={this.getKeyValueStyle()}>select: {this.props.property.isSelected.toString()}</span>

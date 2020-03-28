@@ -18,7 +18,6 @@ export class SchemaControl extends Component {
         return (
             <div style={this.getStyle()}>
                 <Button text="Delete" onClick={this.props.deleteSchema}/>
-                <Button text="Next" onClick={()=>{console.log("Next")}}/>
             </div>
         )
     }

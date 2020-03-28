@@ -10,14 +10,6 @@ export class Body extends Component {
         this.state = {
             selecetedSchema: 0,
             allSchemas: [
-                {
-                    name: 'User',
-                    properties: []
-                },
-                {
-                    name: 'Bill',
-                    properties: []
-                }
             ]
         }
     }
@@ -36,7 +28,7 @@ export class Body extends Component {
         allSchemas.push({name: schemaname, properties: []});
         this.setState({
             allSchemas: allSchemas,
-            selectSchema: allSchemas.length
+            selecetedSchema: allSchemas.length-1
         });
     }
 
@@ -77,7 +69,7 @@ export class Body extends Component {
             <div style={this.getStyle()}>
                 <SideMenu allSchemas={this.state.allSchemas} selectSchema={this.selectSchema} createNewSchema={this.createNewSchema}/>
                 <Main schema={this.state.allSchemas[this.state.selecetedSchema]} deleteSchema={this.deleteSchema} addNewProperty={this.addNewProperty} deleteProperty={this.deleteProperty} />
-                <Output />
+                <Output schema={this.state.allSchemas[this.state.selecetedSchema]} />
             </div>
         )
     }

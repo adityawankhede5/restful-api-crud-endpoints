@@ -6,6 +6,7 @@ html, body{
 }
 *{
   box-sizing: border-box;
+  scrollbar-width: thin;
 }
 input[type='text'], input[type='number']{
   padding: 5px;
@@ -21,4 +22,30 @@ input[type='submit'], input[type='reset']{
   border: 0;
   cursor: pointer;
   margin: 5px;
+}
+
+textarea{
+  width: 100%;
+  padding: 5px;
+  border: 0;
+  height: 350px;
+}
+
+
+
+textarea,
+pre {
+    -moz-tab-size : 2;
+      -o-tab-size : 2;
+         tab-size : 2;
+}
+
+::-webkit-scrollbar{
+  width: 7px;
+  height: 7px;
+  background-color: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #cdcdcd;
 }

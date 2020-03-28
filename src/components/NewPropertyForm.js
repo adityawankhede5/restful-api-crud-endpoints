@@ -69,16 +69,6 @@ export class NewPropertyForm extends Component {
         })
     }
 
-    getDefaultValue = () => {
-        if(this.types[this.state.type]==='Boolean'){
-            if(this.state.default.boolean === 2) return '';
-            else return this.state.default.boolean ? 'true' : 'false';
-        }else if(this.types[this.state.type]==='String' && this.state.default.string !== ''){
-            return `'${this.state.default[this.types[this.state.type].toLowerCase()]}'`
-        }
-        return this.state.default[`${this.types[this.state.type].toLowerCase()}`]
-    }
-
     resetForm = () => {
         this.setState({
             value: '',
@@ -101,6 +91,23 @@ export class NewPropertyForm extends Component {
         })
     }
 
+    getType = () => {
+        if(this.state.array){
+            return `[${this.types[this.state.type]}]`
+        }
+        return this.types[this.state.type]
+    }
+
+    getDefaultValue = () => {
+        if(this.types[this.state.type]==='Boolean'){
+            if(this.state.default.boolean === 2) return '';
+            else return this.state.default.boolean ? 'true' : 'false';
+        }else if(this.types[this.state.type]==='String' && this.state.default.string !== ''){
+            return `"${this.state.default[this.types[this.state.type].toLowerCase()]}"`
+        }
+        return this.state.default[`${this.types[this.state.type].toLowerCase()}`]
+    }
+    
     handleSubmit = (event) =>{
         event.preventDefault();
         if(this.state.value==='' || this.props.allPropertyNames.includes(this.state.value)){
@@ -112,10 +119,9 @@ export class NewPropertyForm extends Component {
 
         const property = {
             name: this.state.value,
-            type: this.types[this.state.type],
-            isArray: this.state.array,
-            isRequired: this.state.required ? true : false,
-            isSelected: this.state.select ? true : false,
+            type: this.getType(),
+            isRequired: this.state.required ? 'true' : 'false',
+            isSelected: this.state.select ? 'true' : 'false',
             defaultValue: this.getDefaultValue(),
         }
         this.props.addNewProperty(property);
