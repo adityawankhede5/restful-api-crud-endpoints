@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import Header from './components/Header';
 import Body from './components/Body';
 
 export class App extends Component {
@@ -14,7 +13,6 @@ export class App extends Component {
   render() {
     return (
       <div style={this.getStyle()}>
-        {/* <Header /> */}
         <Body />
       </div>
     )
