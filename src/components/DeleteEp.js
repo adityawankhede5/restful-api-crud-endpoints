@@ -7,8 +7,8 @@ export class DeleteEp extends Component {
         const nameLowercase = this.props.schema.name.toLowerCase();
         const nameCaptialized = this.props.capitalize(this.props.schema.name);
         return (
-`app.delete('/api/v1/${nameLowercase}/:${nameLowercase}Id', (req, res)=>{
-
+`// Delete Endpoint.
+app.delete('/api/v1/${nameLowercase}/:${nameLowercase}Id', (req, res)=>{
 
     ${nameCaptialized}.findByIdAndRemove(req.params.${nameLowercase}Id)  //Returns the updated document.
     .then((${nameLowercase})=>{
@@ -42,8 +42,7 @@ export class DeleteEp extends Component {
             error: err, 
         });
     });
-
-});
+});\n
 `
         )
     }
@@ -51,13 +50,13 @@ export class DeleteEp extends Component {
     render() {
         return (
             <div style={this.props.style} onClick={()=>{this.props.changeInView(4)}}>
-                <Title text={'Delete Endpoint'} />
+                <Title text={'Delete Endpoint'} getCopyButtonStyle={this.props.getCopyButtonStyle}  toCopy={['delete']} copyCallback={this.props.copyContent} />
                 <div style={this.props.getContentStyle(4)} >
                     <div style={this.props.getSubEndpointStyle()}>
                         <div style={this.props.getHeaderStyle()}>
                             <div style={this.props.getEpNameStyle()}>Delete</div>
                             <div style={this.props.getEpDescriptionStyle()}></div>
-                            <span style={this.props.getCopyButtonStyle()} onClick={()=>{this.props.copyContent('delete')}}>Copy</span>
+                            <span style={this.props.getCopyButtonStyle()} onClick={()=>{this.props.copyContent(['delete'])}}>Copy</span>
                         </div>
                         <textarea wrap="off" readOnly='readonly' value={this.getDeleteCode()} id='delete'></textarea>
                     </div>

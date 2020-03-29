@@ -7,7 +7,8 @@ export class ReadEp extends Component {
         const nameLowercase = this.props.schema.name.toLowerCase();
         const nameCaptialized = this.props.capitalize(this.props.schema.name);
         return (
-`app.get('/api/v1/${nameLowercase}s', (req, res)=>{
+`// Find All Endpoint.
+app.get('/api/v1/${nameLowercase}s', (req, res)=>{
 
     ${nameCaptialized}.find()   //Returns an array.
     .then((${nameLowercase}s)=>{
@@ -25,17 +26,17 @@ export class ReadEp extends Component {
             error: err,
         });
     });
-});
+});\n
 `
         )
     }
-
 
     getFindByIdCode = ()=>{
         const nameLowercase = this.props.schema.name.toLowerCase();
         const nameCaptialized = this.props.capitalize(this.props.schema.name);
         return (
-`app.get('/api/v1/${nameLowercase}/:${nameLowercase}Id', (req, res)=>{
+`// Find By Id Endpoint.
+app.get('/api/v1/${nameLowercase}/:${nameLowercase}Id', (req, res)=>{
 
     ${nameCaptialized}.findById(req.params.${nameLowercase}Id)  //Returns single document.
     .then((${nameLowercase})=>{
@@ -68,8 +69,7 @@ export class ReadEp extends Component {
             error: err, 
         });
     });
-
-});
+});\n
 `
         )
     }
@@ -77,13 +77,13 @@ export class ReadEp extends Component {
     render() {
         return (
             <div style={this.props.style} onClick={()=>{this.props.changeInView(2)}}>
-                <Title text={'Read Endpoint'}/>
+                <Title text={'Read Endpoint'} getCopyButtonStyle={this.props.getCopyButtonStyle} toCopy={['findall', 'findbyid']} copyCallback={this.props.copyContent}/>
                 <div style={this.props.getContentStyle(2)}  >
                     <div style={this.props.getSubEndpointStyle()}>
                         <div style={this.props.getHeaderStyle()}>
                             <div style={this.props.getEpNameStyle()}>Find All</div>
                             <div style={this.props.getEpDescriptionStyle()}></div>
-                            <span style={this.props.getCopyButtonStyle()} onClick={()=>{this.props.copyContent('findall')}}>Copy</span>
+                            <span style={this.props.getCopyButtonStyle()} onClick={()=>{this.props.copyContent(['findall'])}}>Copy</span>
                         </div>
                         <textarea wrap="off" readOnly='readonly' value={this.getFindAllCode()} id='findall'></textarea>
                     </div>
@@ -91,7 +91,7 @@ export class ReadEp extends Component {
                         <div style={this.props.getHeaderStyle()}>
                             <div style={this.props.getEpNameStyle()}>Find By Id</div>
                             <div style={this.props.getEpDescriptionStyle()}></div>
-                            <span style={this.props.getCopyButtonStyle()} onClick={()=>{this.props.copyContent('findbyid')}}>Copy</span>
+                            <span style={this.props.getCopyButtonStyle()} onClick={()=>{this.props.copyContent(['findbyid'])}}>Copy</span>
                         </div>
                         <textarea wrap="off" readOnly='readonly' value={this.getFindByIdCode()} id='findbyid'></textarea>
                     </div>

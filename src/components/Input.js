@@ -54,7 +54,7 @@ export class Input extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        if(this.state.value===''){
+        if(this.state.value==='' || this.props.schemaNames.includes(this.state.value)){
             this.setState({
                 isInvalid: true
             })

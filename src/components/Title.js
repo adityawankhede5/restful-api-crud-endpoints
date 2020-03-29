@@ -6,13 +6,17 @@ export class Title extends Component {
             fontSize: this.props.fontSize || 'large',
             fontWeight: 'bold',
             borderBottom: '2px solid #333333',
-            padding: '3px'
+            padding: '3px',
+            display: 'flex',
+            flexDirection: 'row',
         }
     }
     render() {
         return (
             <div style={this.getStyle()}>
-                {this.props.text}
+                <div style={{flexGrow: 1}}>{this.props.text}</div>
+                {this.props.copyCallback ? <span style={this.props.getCopyButtonStyle()} onClick={()=>{this.props.copyCallback(this.props.toCopy)}}>Copy</span> : ''}
+                
             </div>
         )
     }

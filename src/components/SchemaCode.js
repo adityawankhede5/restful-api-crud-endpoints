@@ -34,7 +34,7 @@ export class SchemaCode extends Component {
 const Schema = mongoose.Schema;\n
 const ${this.props.schema.name}Schema = new Schema({
 ${this.getAllPropertiesCodes()}});\n
-const ${this.props.capitalize(this.props.schema.name)} = mongoose.model('${this.props.capitalize(this.props.schema.name)}', ${this.props.schema.name}Schema);
+module.exports = mongoose.model('${this.props.capitalize(this.props.schema.name)}', ${this.props.schema.name}Schema);\n
 `
         )
     }
@@ -42,9 +42,9 @@ const ${this.props.capitalize(this.props.schema.name)} = mongoose.model('${this.
     render() {
         return (
             <div onClick={()=>{this.props.changeInView(0)}} >
-                <Title text={'Schema Code'} />
+                <Title text={'Schema Code'} getCopyButtonStyle={this.props.getCopyButtonStyle} />
                 <div style={this.props.getContentStyle(0)} >
-                    <span style={this.props.getCopyButtonStyle()} onClick={()=>{this.props.copyContent('schema')}}>Copy</span>
+                    <span style={this.props.getCopyButtonStyle()} onClick={()=>{this.props.copyContent(['schema'])}}>Copy</span>
                     <textarea wrap="off" readOnly='readonly' value={this.getSchemaCode()} id='schema'>
                     </textarea>
                     

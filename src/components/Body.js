@@ -8,9 +8,8 @@ export class Body extends Component {
         super(props)
     
         this.state = {
-            selecetedSchema: 0,
-            allSchemas: [
-            ]
+            selecetedSchema: -1,
+            allSchemas: []
         }
     }
     

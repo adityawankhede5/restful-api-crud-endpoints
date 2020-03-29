@@ -22,7 +22,7 @@ export class NewSchema extends Component {
         return (
             <div style={this.getStyle()}>
                 <Title text="New Schema" />
-                <Input type="text" placeholder="Schema Name" submitNow={this.props.createNewSchema} submit={'Create'}/>
+                <Input type="text" placeholder="Schema Name" submitNow={this.props.createNewSchema} submit={'Create'} schemaNames={this.props.schemaNames}/>
             </div>
         )
     }

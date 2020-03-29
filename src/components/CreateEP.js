@@ -30,7 +30,8 @@ export class CreateEP extends Component {
         const nameLowercase = this.props.schema.name.toLowerCase();
         const nameCaptialized = this.props.capitalize(this.props.schema.name);
         return (
-`app.post('/api/v1/${nameLowercase}/new', (req, res)=>{
+`// Create Endpoint
+app.post('/api/v1/${nameLowercase}/new', (req, res)=>{
 
     if(!req.body.${nameLowercase}){
         res.status(400).json({
@@ -60,8 +61,7 @@ ${this.getAllProperties()}
             error: err
         });
     });
-
-});
+});\n
 `
         )
     }
@@ -69,13 +69,13 @@ ${this.getAllProperties()}
     render() {
         return (
             <div style={this.props.style} onClick={()=>{this.props.changeInView(1)}}>
-                <Title text={'Create Endpoint'} />
+                <Title text={'Create Endpoint'} getCopyButtonStyle={this.props.getCopyButtonStyle} toCopy={['createone']} copyCallback={this.props.copyContent}/>
                 <div style={this.props.getContentStyle(1)}>
                     <div style={this.props.getSubEndpointStyle()}>
                         <div style={this.props.getHeaderStyle()}>
                             <div style={this.props.getEpNameStyle()}>Create One</div>
                             <div style={this.props.getEpDescriptionStyle()}></div>
-                            <span style={this.props.getCopyButtonStyle()} onClick={()=>{this.props.copyContent('createone')}}>Copy</span>
+                            <span style={this.props.getCopyButtonStyle()} onClick={()=>{this.props.copyContent(['createone'])}}>Copy</span>
                         </div>
                         <textarea wrap="off" readOnly='readonly' value={this.getCreateOneCode()} id='createone'></textarea>
                     </div>

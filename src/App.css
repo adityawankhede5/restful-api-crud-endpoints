@@ -29,6 +29,7 @@ textarea{
   padding: 5px;
   border: 0;
   height: 350px;
+  resize: none;
 }
 
 

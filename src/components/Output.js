@@ -4,6 +4,7 @@ import CreateEP from './CreateEP'
 import ReadEp from './ReadEp'
 import UpdateEp from './UpdateEp'
 import DeleteEp from './DeleteEp'
+import Title from './Title'
 
 export class Output extends Component {
     constructor(props) {
@@ -39,7 +40,6 @@ export class Output extends Component {
             right: 0,
             overflow: 'auto',
             padding: '10px',
-            paddingBottom: '0px',
         }
     }
 
@@ -97,10 +97,17 @@ export class Output extends Component {
         return string.charAt(0).toUpperCase() + string.slice(1);
     }
 
-    copyContent = (elid) => {
-        const el = document.getElementById(elid);
+    copyContent = (elids) => {
+        let code='';
+        elids.forEach((elid,i)=>{
+            code += document.getElementById(elid).textContent; 
+        });
+        const el = document.createElement('textarea');
+        el.value = code;
+        document.body.appendChild(el);
         el.select();
         document.execCommand('copy');
+        document.body.removeChild(el);
     }
 
     render() {
@@ -118,7 +125,11 @@ export class Output extends Component {
                         getCopyButtonStyle={this.getCopyButtonStyle}
                         capitalize={this.capitalize}
                         copyContent={this.copyContent}
-                        changeInView={this.changeInView} />
+                        changeInView={this.changeInView}
+                        />
+                    <div>
+                    <Title text={'Endpoints'} fontSize={'x-large'} 
+                        getCopyButtonStyle={this.getCopyButtonStyle} toCopy={['createone', 'findall', 'findbyid', 'update', 'delete']} copyCallback={this.copyContent}/>
                     <CreateEP 
                         schema={this.props.schema}  
                         getContentStyle={this.getContentStyle} 
@@ -129,7 +140,9 @@ export class Output extends Component {
                         getCopyButtonStyle={this.getCopyButtonStyle}
                         capitalize={this.capitalize}
                         copyContent={this.copyContent}
-                        changeInView={this.changeInView} />
+                        changeInView={this.changeInView}
+                        copyCallback={this.copyContent} 
+                        />
                     <ReadEp 
                         schema={this.props.schema}  
                         getContentStyle={this.getContentStyle} 
@@ -140,7 +153,9 @@ export class Output extends Component {
                         getCopyButtonStyle={this.getCopyButtonStyle}
                         capitalize={this.capitalize}
                         copyContent={this.copyContent}
-                        changeInView={this.changeInView} />
+                        changeInView={this.changeInView}
+                        copyCallback={this.copyContent} 
+                        />
                     <UpdateEp 
                         schema={this.props.schema}  
                         getContentStyle={this.getContentStyle} 
@@ -151,7 +166,9 @@ export class Output extends Component {
                         getCopyButtonStyle={this.getCopyButtonStyle}
                         capitalize={this.capitalize}
                         copyContent={this.copyContent}
-                        changeInView={this.changeInView} />
+                        changeInView={this.changeInView}
+                        copyCallback={this.copyContent} 
+                        />
                     <DeleteEp 
                         schema={this.props.schema}  
                         getContentStyle={this.getContentStyle} 
@@ -162,7 +179,10 @@ export class Output extends Component {
                         getCopyButtonStyle={this.getCopyButtonStyle}
                         capitalize={this.capitalize}
                         copyContent={this.copyContent}
-                        changeInView={this.changeInView} />
+                        changeInView={this.changeInView}
+                        copyCallback={this.copyContent} 
+                        />
+                    </div>
                 </div>
             </div>
 
