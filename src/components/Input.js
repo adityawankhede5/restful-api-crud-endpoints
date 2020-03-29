@@ -26,7 +26,9 @@ export class Input extends Component {
             borderBottom: this.state.isInvalid ? '1px solid crimson' : '1px solid #333333' ,
             // fontWeight: 600,
             width: '100%',
-            fontSize: 'large'
+            fontSize: 'large',
+            backgroundColor: 'rgba(21,21,21)',
+            color: 'white'
         }
     }
 

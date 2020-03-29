@@ -12,7 +12,7 @@ export class Main extends Component {
             padding: '10px',
             display: 'flex',
             flexDirection: 'column',
-            paddingBottom: '0px'
+            paddingBottom: '0px',
         }
     }
 

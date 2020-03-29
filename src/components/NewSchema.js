@@ -21,8 +21,8 @@ export class NewSchema extends Component {
     render() {
         return (
             <div style={this.getStyle()}>
-                <Title text="New Schema" />
-                <Input type="text" placeholder="Schema Name" submitNow={this.props.createNewSchema} submit={'Create'} schemaNames={this.props.schemaNames}/>
+                <Title text="New Schema" color={this.props.titleColor}/>
+                <Input type="text" placeholder="Name" submitNow={this.props.createNewSchema} submit={'Create'} schemaNames={this.props.schemaNames}/>
             </div>
         )
     }

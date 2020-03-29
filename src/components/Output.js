@@ -25,8 +25,9 @@ export class Output extends Component {
         return {
             // border: '5px solid crimson',
             height: '100%',
-            width: '30%',
-            position: 'relative'
+            width: '35%',
+            position: 'relative',
+            // backgroundColor: '#2b3032',
         }
     }
 
@@ -84,7 +85,7 @@ export class Output extends Component {
 
     getCopyButtonStyle = () => {
         return {
-            backgroundColor: '#333333',
+            backgroundColor: 'rgb(21,21,21)',
             color: 'white',
             fontSize: 'small',
             padding: '5px',

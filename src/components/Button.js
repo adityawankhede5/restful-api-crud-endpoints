@@ -3,10 +3,9 @@ import React, { Component } from 'react'
 export class Button extends Component {
     getStyle=()=>{
         return {
-            padding: '5px 10px',
-            backgroundColor: '#333333',
+            padding: '5px 15px',
+            backgroundColor: '#D63031',
             color: 'white',
-            fontWeight: 600,
             margin: '3px',
             cursor: 'pointer'
         }

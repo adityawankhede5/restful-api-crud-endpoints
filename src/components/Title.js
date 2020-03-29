@@ -4,6 +4,7 @@ export class Title extends Component {
     getStyle = () => {
         return {
             fontSize: this.props.fontSize || 'large',
+            color: this.props.color || 'black',
             fontWeight: 'bold',
             borderBottom: '2px solid #333333',
             padding: '3px',

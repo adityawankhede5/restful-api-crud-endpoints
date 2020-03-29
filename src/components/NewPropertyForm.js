@@ -47,12 +47,11 @@ export class NewPropertyForm extends Component {
     }
     getBooleanBoxOptionStyle = (id) => {
         return {
-            padding: '3px 10px',
+            padding: '5px 15px',
             fontSize: 'small',
             cursor: 'pointer',
-            border: '1px solid #333333',
-            backgroundColor: this.state.default.boolean===id ? '#333333' : 'white',
-            color: this.state.default.boolean===id ? 'white' : 'black'
+            backgroundColor: this.state.default.boolean===id ? '#26ae60' : 'rgba(21,21,21)',
+            color: 'white',
         }
     }
 

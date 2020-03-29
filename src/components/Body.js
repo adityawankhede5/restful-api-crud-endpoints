@@ -9,7 +9,8 @@ export class Body extends Component {
     
         this.state = {
             selecetedSchema: -1,
-            allSchemas: []
+            allSchemas: [],
+            isMobile: window.innerWidth < 400,
         }
     }
     
@@ -66,7 +67,7 @@ export class Body extends Component {
     render() {
         return (
             <div style={this.getStyle()}>
-                <SideMenu allSchemas={this.state.allSchemas} selectSchema={this.selectSchema} createNewSchema={this.createNewSchema}/>
+                <SideMenu allSchemas={this.state.allSchemas} selectedSchema={this.state.selecetedSchema} selectSchema={this.selectSchema} createNewSchema={this.createNewSchema}/>
                 <Main schema={this.state.allSchemas[this.state.selecetedSchema]} deleteSchema={this.deleteSchema} addNewProperty={this.addNewProperty} deleteProperty={this.deleteProperty} />
                 <Output schema={this.state.allSchemas[this.state.selecetedSchema]} />
             </div>

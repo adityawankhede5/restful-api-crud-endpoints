@@ -14,7 +14,7 @@ export class App extends Component {
   render() {
     return (
       <div style={this.getStyle()}>
-        <Header />
+        {/* <Header /> */}
         <Body />
       </div>
     )

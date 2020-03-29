@@ -27,7 +27,7 @@ export class Property extends Component {
             padding: '2px',
             margin: '2px',
             cursor: 'pointer',
-            color: 'crimson'
+            color: '#D63031'
         }
     }
 

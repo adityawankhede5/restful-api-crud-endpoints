@@ -31,17 +31,19 @@ export class RadioBox extends Component {
     getOptionsStyle = () => {
         return {
             display: 'flex',
-            flexDirection: 'row'
+            flexDirection: 'row',
+            flexWrap: 'wrap',
         }
     }
     getOptionStyle = (id) => {
         return {
-            padding: '3px 10px',
+            padding: '5px 15px',
             fontSize: 'small',
             cursor: 'pointer',
-            border: '1px solid #333333',
-            backgroundColor: this.props.selected===id ? '#333333' : 'white',
-            color: this.props.selected===id ? 'white' : 'black'
+            // border: '1px solid rgba(21,21,21)',
+            backgroundColor: this.props.selected===id ? '#26ae60' : 'rgba(21,21,21)',
+            // color: this.props.selected===id ? 'white' : 'black',
+            color: 'white',
         }
     }
 
