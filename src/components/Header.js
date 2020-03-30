@@ -19,7 +19,7 @@ export class Header extends Component {
     render() {
         return (
             <div style={this.getStyle()}>
-                <span>CRUD Endpoints</span>
+                <span>RESTful API CRUD Endpoints</span>
                 <span style={{fontSize: 'x-small'}}>for express</span>
             </div>
         )
