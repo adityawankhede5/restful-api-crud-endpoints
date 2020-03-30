@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/restful-api-crud-endpoints/static/css/main.3c9e5021.chunk.css",
+    "main.js": "/restful-api-crud-endpoints/static/js/main.041f4e67.chunk.js",
+    "main.js.map": "/restful-api-crud-endpoints/static/js/main.041f4e67.chunk.js.map",
+    "runtime-main.js": "/restful-api-crud-endpoints/static/js/runtime-main.637db049.js",
+    "runtime-main.js.map": "/restful-api-crud-endpoints/static/js/runtime-main.637db049.js.map",
+    "static/js/2.a74eb657.chunk.js": "/restful-api-crud-endpoints/static/js/2.a74eb657.chunk.js",
+    "static/js/2.a74eb657.chunk.js.map": "/restful-api-crud-endpoints/static/js/2.a74eb657.chunk.js.map",
+    "index.html": "/restful-api-crud-endpoints/index.html",
+    "precache-manifest.46f4a9d514cf799296240447505f84b6.js": "/restful-api-crud-endpoints/precache-manifest.46f4a9d514cf799296240447505f84b6.js",
+    "service-worker.js": "/restful-api-crud-endpoints/service-worker.js",
+    "static/css/main.3c9e5021.chunk.css.map": "/restful-api-crud-endpoints/static/css/main.3c9e5021.chunk.css.map",
+    "static/js/2.a74eb657.chunk.js.LICENSE.txt": "/restful-api-crud-endpoints/static/js/2.a74eb657.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.637db049.js",
+    "static/js/2.a74eb657.chunk.js",
+    "static/css/main.3c9e5021.chunk.css",
+    "static/js/main.041f4e67.chunk.js"
+  ]
+}
