@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/restful-api-crud-endpoints/static/css/main.0b01e131.chunk.css",
-    "main.js": "/restful-api-crud-endpoints/static/js/main.6ffa44c1.chunk.js",
-    "main.js.map": "/restful-api-crud-endpoints/static/js/main.6ffa44c1.chunk.js.map",
+    "main.js": "/restful-api-crud-endpoints/static/js/main.89514501.chunk.js",
+    "main.js.map": "/restful-api-crud-endpoints/static/js/main.89514501.chunk.js.map",
     "runtime-main.js": "/restful-api-crud-endpoints/static/js/runtime-main.637db049.js",
     "runtime-main.js.map": "/restful-api-crud-endpoints/static/js/runtime-main.637db049.js.map",
     "static/js/2.04a44e90.chunk.js": "/restful-api-crud-endpoints/static/js/2.04a44e90.chunk.js",
     "static/js/2.04a44e90.chunk.js.map": "/restful-api-crud-endpoints/static/js/2.04a44e90.chunk.js.map",
     "index.html": "/restful-api-crud-endpoints/index.html",
-    "precache-manifest.a31828c4f9ac513e7b55f94c674ee4ff.js": "/restful-api-crud-endpoints/precache-manifest.a31828c4f9ac513e7b55f94c674ee4ff.js",
+    "precache-manifest.fa6c583164a11f3934bb85d6934da48c.js": "/restful-api-crud-endpoints/precache-manifest.fa6c583164a11f3934bb85d6934da48c.js",
     "service-worker.js": "/restful-api-crud-endpoints/service-worker.js",
     "static/css/main.0b01e131.chunk.css.map": "/restful-api-crud-endpoints/static/css/main.0b01e131.chunk.css.map",
     "static/js/2.04a44e90.chunk.js.LICENSE.txt": "/restful-api-crud-endpoints/static/js/2.04a44e90.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.637db049.js",
     "static/js/2.04a44e90.chunk.js",
     "static/css/main.0b01e131.chunk.css",
-    "static/js/main.6ffa44c1.chunk.js"
+    "static/js/main.89514501.chunk.js"
   ]
 }

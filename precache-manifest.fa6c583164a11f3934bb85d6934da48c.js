@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d148b3f6d24c0276799124bbf1c55e10",
+    "revision": "af795ba5121d3ff1d60b51eeee45dfea",
     "url": "/restful-api-crud-endpoints/index.html"
   },
   {
-    "revision": "c0b583fd163540b483ff",
+    "revision": "015bb8fc39df2a9aefa5",
     "url": "/restful-api-crud-endpoints/static/css/main.0b01e131.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/restful-api-crud-endpoints/static/js/2.04a44e90.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c0b583fd163540b483ff",
-    "url": "/restful-api-crud-endpoints/static/js/main.6ffa44c1.chunk.js"
+    "revision": "015bb8fc39df2a9aefa5",
+    "url": "/restful-api-crud-endpoints/static/js/main.89514501.chunk.js"
   },
   {
     "revision": "a68af9ea8dfb351f371f",
